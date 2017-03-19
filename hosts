@@ -1,5 +1,5 @@
 [elk]
-elasticsearch.ipa.example.com
+elasticsearch.ipa.example
 
 [elk-client]
-aker.ipa.example.com
+aker.ipa.example
