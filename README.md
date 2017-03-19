@@ -27,10 +27,15 @@ Ansible Playbook for setting up the ELK/EFK Stack and Filebeat client on remote 
 **ELK Server Instructions**
    - Clone repo and setup your hosts file
 ```
-git clone https://github.com/sadsfae/ansible-elk
-cd ansible-elk
-sed -i 's/host-01/elkserver/' hosts
-sed -i 's/host-02/elkclient/' hosts
+git clone https://github.com/aker-gateway/aker-elk-playbook
+cd aker-elk-playbook
+$ cat hosts 
+[elk]
+elasticsearch.ipa.example
+
+[elk-client]
+aker.ipa.example
+
 ```
    - Run the playbook
 ```
@@ -45,11 +50,6 @@ ansible-playbook -i hosts install/elk.yml
 ```
 ansible-playbook -i hosts install/elk-client.yml --extra-vars 'elk_server=X.X.X.X'
 ```
-   - You can view a deployment video here:
-
-
-[![Ansible Elk](http://img.youtube.com/vi/6is6Ecxc2zE/0.jpg)](http://www.youtube.com/watch?v=6is6Ecxc2zE "Deploying ELK with Ansible")
-
 
 **File Hierarchy**
 ```
