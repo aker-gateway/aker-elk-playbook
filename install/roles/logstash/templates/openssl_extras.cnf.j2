@@ -4,11 +4,11 @@ x509_extensions = v3_req
 prompt = no
 
 [req_distinguished_name]
-C = TG
-ST = Togo
-L =  Lome
-O = Private company
-CN = *
+C = AE
+ST = Dubai
+L =  Dubai
+O = AkerGateway
+CN = {{ ansible_fqdn }}
 
 [v3_req]
 subjectKeyIdentifier = hash
@@ -17,11 +17,4 @@ basicConstraints = CA:TRUE
 subjectAltName = @alt_names
 
 [alt_names]
-DNS.1 = *
-DNS.2 = *.*
-DNS.3 = *.*.*
-DNS.4 = *.*.*.*
-DNS.5 = *.*.*.*.*
-DNS.6 = *.*.*.*.*.*
-DNS.7 = *.*.*.*.*.*.*
 IP.1 = {{ ansible_default_ipv4.address }}
